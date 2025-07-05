@@ -24,22 +24,30 @@ const getStyles = (theme: "light" | "dark" | null | undefined) => {
   const currentTheme = themes[theme || "light"];
   return StyleSheet.create({
     quoteContainer: {
-      padding: 20,
-      borderRadius: 10,
+      padding: 30,
+      borderRadius: 15,
       backgroundColor: currentTheme.quoteContainer,
       margin: 20,
+      shadowColor: "#000",
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 5,
     },
     quoteText: {
-      fontSize: 24,
-      fontStyle: "italic",
+      fontSize: 28,
+      fontFamily: "PlayfairDisplay-Regular",
       color: currentTheme.text,
       textAlign: "center",
+      marginBottom: 20,
     },
     authorText: {
       fontSize: 18,
-      color: currentTheme.text,
+      color: currentTheme.author,
       textAlign: "right",
-      marginTop: 10,
     },
   });
 };
