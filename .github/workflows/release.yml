@@ -44,4 +44,6 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm dlx semantic-release
+        run: |
+          export HUSKY=0
+          pnpm dlx semantic-release
