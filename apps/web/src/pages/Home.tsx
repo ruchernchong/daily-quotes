@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { FiBell, FiHeart, FiSmartphone } from 'react-icons/fi'
 import Layout from '../components/Layout'
+import iconPng from '../assets/icon.png'
 
 function Home() {
   useEffect(() => {
@@ -11,6 +12,9 @@ function Home() {
     <Layout>
       <div>
         <section className="text-center py-20 px-6 bg-gray-100">
+          <div className="flex justify-center mb-8">
+            <img src={iconPng} alt="Daily Quotes App" className="w-24 h-24 rounded-2xl" />
+          </div>
           <h2 className="text-5xl font-bold mb-4">
             Your Daily Dose of Inspiration
           </h2>

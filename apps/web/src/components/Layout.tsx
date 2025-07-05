@@ -1,5 +1,6 @@
 import type React from 'react'
 import { Link } from 'react-router-dom'
+import iconSvg from '../assets/icon.svg'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -10,7 +11,8 @@ function Layout({ children }: LayoutProps) {
     <div className="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
       <header className="bg-white shadow-md">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link to="/" className="text-2xl font-bold text-gray-900">
+          <Link to="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+            <img src={iconSvg} alt="Daily Quotes" className="w-8 h-8 rounded-lg" />
             Daily Quotes
           </Link>
           <nav>
