@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/ruchernchong/daily-quotes/compare/v1.0.1...v1.1.0) (2025-07-05)
+
+
+### Bug Fixes
+
+* **mobile:** update packages for compatbility ([52d92f3](https://github.com/ruchernchong/daily-quotes/commit/52d92f32c82d891647c33e24f3fbd0fe16045df5))
+
+
+### Features
+
+* configure pnpm to hoist dependencies ([1de8b7e](https://github.com/ruchernchong/daily-quotes/commit/1de8b7e15fd25ecb79b75765a6c8b831e395fb92))
+
 ## [1.0.1](https://github.com/ruchernchong/daily-quotes/compare/v1.0.0...v1.0.1) (2025-07-05)
 
 
