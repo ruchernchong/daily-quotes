@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00817E0579567E7E0B35BD15 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCC0FF31C9083FAE844AD89 /* ExpoModulesProvider.swift */; };
+		0C282FFB606E96D33AF125DB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = ADB76B7C556042EAC5A09B3C /* PrivacyInfo.xcprivacy */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		33AC3E793EC7E0A1DD91CBEB /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4DA705D34835760CE25A6 /* ExpoModulesProvider.swift */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
+		4BD38769779FF6633DB2F016 /* libPods-dailyquotes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A661F5A7C1A4AA3722FF06 /* libPods-dailyquotes.a */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		E05E243AF5FBB65C3231FA2C /* libPods-dailyquotes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F38EE6B3A1C894DA973FED63 /* libPods-dailyquotes.a */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
-		FADF6BD731ADD946550F3ADB /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 8A750C9178981EE0D9209C2A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13B07F961A680F5B00A75B9A /* dailyquotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dailyquotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = dailyquotes/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = dailyquotes/Info.plist; sourceTree = "<group>"; };
-		23D741A848F688EC0951D631 /* Pods-dailyquotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailyquotes.release.xcconfig"; path = "Target Support Files/Pods-dailyquotes/Pods-dailyquotes.release.xcconfig"; sourceTree = "<group>"; };
-		5BCC0FF31C9083FAE844AD89 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-dailyquotes/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		8A750C9178981EE0D9209C2A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = dailyquotes/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		A910867C25CF863B37FAF836 /* Pods-dailyquotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailyquotes.debug.xcconfig"; path = "Target Support Files/Pods-dailyquotes/Pods-dailyquotes.debug.xcconfig"; sourceTree = "<group>"; };
+		17DFAFCCEC5E5B27347A111D /* Pods-dailyquotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailyquotes.release.xcconfig"; path = "Target Support Files/Pods-dailyquotes/Pods-dailyquotes.release.xcconfig"; sourceTree = "<group>"; };
+		9456D27D314613CBFBD064EE /* Pods-dailyquotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dailyquotes.debug.xcconfig"; path = "Target Support Files/Pods-dailyquotes/Pods-dailyquotes.debug.xcconfig"; sourceTree = "<group>"; };
+		94D4DA705D34835760CE25A6 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-dailyquotes/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = dailyquotes/SplashScreen.storyboard; sourceTree = "<group>"; };
+		ADB76B7C556042EAC5A09B3C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = dailyquotes/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		C4A661F5A7C1A4AA3722FF06 /* libPods-dailyquotes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dailyquotes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = dailyquotes/AppDelegate.swift; sourceTree = "<group>"; };
 		F11748442D0722820044C1D9 /* dailyquotes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "dailyquotes-Bridging-Header.h"; path = "dailyquotes/dailyquotes-Bridging-Header.h"; sourceTree = "<group>"; };
-		F38EE6B3A1C894DA973FED63 /* libPods-dailyquotes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dailyquotes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E05E243AF5FBB65C3231FA2C /* libPods-dailyquotes.a in Frameworks */,
+				4BD38769779FF6633DB2F016 /* libPods-dailyquotes.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,34 +53,34 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				8A750C9178981EE0D9209C2A /* PrivacyInfo.xcprivacy */,
+				ADB76B7C556042EAC5A09B3C /* PrivacyInfo.xcprivacy */,
 			);
 			name = dailyquotes;
-			sourceTree = "<group>";
-		};
-		16332E512C275DA2D7871BD0 /* ExpoModulesProviders */ = {
-			isa = PBXGroup;
-			children = (
-				79665CD516038C22122EDD69 /* dailyquotes */,
-			);
-			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				F38EE6B3A1C894DA973FED63 /* libPods-dailyquotes.a */,
+				C4A661F5A7C1A4AA3722FF06 /* libPods-dailyquotes.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		79665CD516038C22122EDD69 /* dailyquotes */ = {
+		35BA43E8BD5BCC998E2CC9DB /* dailyquotes */ = {
 			isa = PBXGroup;
 			children = (
-				5BCC0FF31C9083FAE844AD89 /* ExpoModulesProvider.swift */,
+				94D4DA705D34835760CE25A6 /* ExpoModulesProvider.swift */,
 			);
 			name = dailyquotes;
+			sourceTree = "<group>";
+		};
+		56241523F6B61347CFE8045E /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				35BA43E8BD5BCC998E2CC9DB /* dailyquotes */,
+			);
+			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -97,8 +97,8 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				AA35C27E1721A703D71A285B /* Pods */,
-				16332E512C275DA2D7871BD0 /* ExpoModulesProviders */,
+				F7037E9B2D466984A77287CB /* Pods */,
+				56241523F6B61347CFE8045E /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -113,16 +113,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AA35C27E1721A703D71A285B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A910867C25CF863B37FAF836 /* Pods-dailyquotes.debug.xcconfig */,
-				23D741A848F688EC0951D631 /* Pods-dailyquotes.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		BB2F792B24A3F905000567C9 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +120,16 @@
 			);
 			name = Supporting;
 			path = dailyquotes/Supporting;
+			sourceTree = "<group>";
+		};
+		F7037E9B2D466984A77287CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9456D27D314613CBFBD064EE /* Pods-dailyquotes.debug.xcconfig */,
+				17DFAFCCEC5E5B27347A111D /* Pods-dailyquotes.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,13 +140,13 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "dailyquotes" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				6C2027CE367DB1A74EC0309A /* [Expo] Configure project */,
+				7E307DF2EFD9E5264F85C60C /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				B7D977A45B1F762A18C62741 /* [CP] Embed Pods Frameworks */,
+				883E23BCE2401AF26BF16880 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,7 +196,7 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				FADF6BD731ADD946550F3ADB /* PrivacyInfo.xcprivacy in Resources */,
+				0C282FFB606E96D33AF125DB /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +240,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6C2027CE367DB1A74EC0309A /* [Expo] Configure project */ = {
+		7E307DF2EFD9E5264F85C60C /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -266,8 +266,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-dailyquotes/Pods-dailyquotes-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXApplication/ExpoApplication_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/EXConstants.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/ExpoConstants_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXNotifications/ExpoNotifications_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoFileSystem/ExpoFileSystem_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoSystemUI/ExpoSystemUI_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/RCT-Folly/RCT-Folly_privacy.bundle",
@@ -282,8 +284,10 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoApplication_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXConstants.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoConstants_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoNotifications_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoFileSystem_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoSystemUI_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCT-Folly_privacy.bundle",
@@ -301,7 +305,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dailyquotes/Pods-dailyquotes-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B7D977A45B1F762A18C62741 /* [CP] Embed Pods Frameworks */ = {
+		883E23BCE2401AF26BF16880 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,7 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
-				00817E0579567E7E0B35BD15 /* ExpoModulesProvider.swift in Sources */,
+				33AC3E793EC7E0A1DD91CBEB /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +340,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A910867C25CF863B37FAF836 /* Pods-dailyquotes.debug.xcconfig */;
+			baseConfigurationReference = 9456D27D314613CBFBD064EE /* Pods-dailyquotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -372,7 +376,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23D741A848F688EC0951D631 /* Pods-dailyquotes.release.xcconfig */;
+			baseConfigurationReference = 17DFAFCCEC5E5B27347A111D /* Pods-dailyquotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
