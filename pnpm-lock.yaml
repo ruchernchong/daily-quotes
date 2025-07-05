@@ -6,7 +6,9 @@ settings:
 
 importers:
 
-  .:
+  .: {}
+
+  apps/mobile:
     dependencies:
       '@expo/vector-icons':
         specifier: ^14.1.0
