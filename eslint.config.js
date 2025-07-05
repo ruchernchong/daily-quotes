@@ -1,8 +1,0 @@
-// https://docs.expo.dev/guides/using-eslint/
-const { defineConfig } = require('eslint/config');
-
-module.exports = defineConfig([
-  {
-    ignores: ['apps/mobile/dist/*'],
-  },
-]);

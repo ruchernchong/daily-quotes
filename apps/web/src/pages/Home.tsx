@@ -1,21 +1,35 @@
-import React, { useEffect } from 'react';
-import { FiSmartphone, FiHeart, FiBell } from 'react-icons/fi';
-import Layout from '../components/Layout';
+import React, { useEffect } from 'react'
+import { FiBell, FiHeart, FiSmartphone } from 'react-icons/fi'
+import Layout from '../components/Layout'
 
 function Home() {
   useEffect(() => {
-    document.title = 'Daily Quotes - Your Daily Dose of Inspiration';
-  }, []);
+    document.title = 'Daily Quotes - Your Daily Dose of Inspiration'
+  }, [])
 
   return (
     <Layout>
       <div>
         <section className="text-center py-20 px-6 bg-gray-100">
-          <h2 className="text-5xl font-bold mb-4">Your Daily Dose of Inspiration</h2>
-          <p className="text-xl mb-8">Get motivated with hand-picked quotes delivered to you every day.</p>
+          <h2 className="text-5xl font-bold mb-4">
+            Your Daily Dose of Inspiration
+          </h2>
+          <p className="text-xl mb-8">
+            Get motivated with hand-picked quotes delivered to you every day.
+          </p>
           <div className="flex justify-center gap-4">
-            <a href="#" className="bg-gray-900 text-white font-bold py-3 px-6 rounded-lg">Download for iOS</a>
-            <a href="#" className="bg-gray-900 text-white font-bold py-3 px-6 rounded-lg">Download for Android</a>
+            <a
+              href="#"
+              className="bg-gray-900 text-white font-bold py-3 px-6 rounded-lg"
+            >
+              Download for iOS
+            </a>
+            <a
+              href="#"
+              className="bg-gray-900 text-white font-bold py-3 px-6 rounded-lg"
+            >
+              Download for Android
+            </a>
           </div>
         </section>
 
@@ -47,24 +61,42 @@ function Home() {
         <section className="py-20 px-6 bg-gray-100">
           <div className="container mx-auto text-center">
             <h3 className="text-3xl font-bold mb-8">See the App in Action</h3>
-            <img src="https://via.placeholder.com/800x400" alt="App Screenshot" className="mx-auto rounded-lg shadow-lg" />
+            <img
+              src="https://via.placeholder.com/800x400"
+              alt="App Screenshot"
+              className="mx-auto rounded-lg shadow-lg"
+            />
           </div>
         </section>
 
         {/* Call to Action Section */}
         <section id="download" className="py-20 px-6">
           <div className="container mx-auto text-center">
-            <h3 className="text-3xl font-bold mb-4">Download Daily Quotes Today!</h3>
-            <p className="text-xl mb-8">Join thousands of users who start their day with inspiration.</p>
+            <h3 className="text-3xl font-bold mb-4">
+              Download Daily Quotes Today!
+            </h3>
+            <p className="text-xl mb-8">
+              Join thousands of users who start their day with inspiration.
+            </p>
             <div className="flex justify-center gap-4">
-              <a href="#" className="bg-gray-900 text-white font-bold py-3 px-6 rounded-lg">Download for iOS</a>
-              <a href="#" className="bg-gray-900 text-white font-bold py-3 px-6 rounded-lg">Download for Android</a>
+              <a
+                href="#"
+                className="bg-gray-900 text-white font-bold py-3 px-6 rounded-lg"
+              >
+                Download for iOS
+              </a>
+              <a
+                href="#"
+                className="bg-gray-900 text-white font-bold py-3 px-6 rounded-lg"
+              >
+                Download for Android
+              </a>
             </div>
           </div>
         </section>
       </div>
     </Layout>
-  );
+  )
 }
 
-export default Home;
+export default Home

@@ -1,6 +1,6 @@
-import { createBrowserRouter } from 'react-router-dom';
-import Home from '../pages/Home';
-import PrivacyPolicy from '../pages/PrivacyPolicy';
+import { createBrowserRouter } from 'react-router-dom'
+import Home from '../pages/Home'
+import PrivacyPolicy from '../pages/PrivacyPolicy'
 
 export const router = createBrowserRouter([
   {
@@ -11,4 +11,4 @@ export const router = createBrowserRouter([
     path: '/privacy-policy',
     element: <PrivacyPolicy />,
   },
-]);
+])

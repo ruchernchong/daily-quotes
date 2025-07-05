@@ -1,19 +1,13 @@
-import {
-  View,
-  Text,
-  FlatList,
-  StyleSheet,
-  useColorScheme,
-} from "react-native";
-import { useFavorites } from "./hooks/useFavorites";
-import { Quote } from "./components/Quote";
-import { themes } from "./constants/Themes";
+import { FlatList, StyleSheet, Text, useColorScheme, View } from 'react-native'
+import { Quote } from './components/Quote'
+import { themes } from './constants/Themes'
+import { useFavorites } from './hooks/useFavorites'
 
 const FavoritesScreen = () => {
-  const { favorites } = useFavorites();
-  const colorScheme = useColorScheme();
-  const theme = colorScheme || "light";
-  const styles = getStyles(theme);
+  const { favorites } = useFavorites()
+  const colorScheme = useColorScheme()
+  const theme = colorScheme || 'light'
+  const styles = getStyles(theme)
 
   return (
     <View style={styles.container}>
@@ -22,19 +16,15 @@ const FavoritesScreen = () => {
         data={favorites}
         keyExtractor={(item) => item.quote}
         renderItem={({ item }) => (
-          <Quote
-            quote={item.quote}
-            author={item.author}
-            theme={theme}
-          />
+          <Quote quote={item.quote} author={item.author} theme={theme} />
         )}
       />
     </View>
-  );
-};
+  )
+}
 
-const getStyles = (theme: "light" | "dark") => {
-  const currentTheme = themes[theme];
+const getStyles = (theme: 'light' | 'dark') => {
+  const currentTheme = themes[theme]
   return StyleSheet.create({
     container: {
       flex: 1,
@@ -43,12 +33,12 @@ const getStyles = (theme: "light" | "dark") => {
     },
     title: {
       fontSize: 24,
-      fontWeight: "bold",
+      fontWeight: 'bold',
       color: currentTheme.text,
       marginBottom: 20,
-      textAlign: "center",
+      textAlign: 'center',
     },
-  });
-};
+  })
+}
 
-export default FavoritesScreen;
+export default FavoritesScreen
