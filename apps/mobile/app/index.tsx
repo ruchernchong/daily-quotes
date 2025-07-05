@@ -1,4 +1,4 @@
-import { Feather } from '@expo/vector-icons'
+import { Moon, Sun, Heart, RefreshCw } from 'lucide-react-native'
 import { useFonts } from 'expo-font'
 import { Link } from 'expo-router'
 import { useState } from 'react'
@@ -37,19 +37,19 @@ export default function Index() {
       <Quote quote={quote?.quote} author={quote?.author} theme={theme} />
       <View style={styles.buttonContainer}>
         <TouchableOpacity onPress={toggleTheme} style={styles.button}>
-          <Feather
-            name={theme === 'dark' ? 'sun' : 'moon'}
-            size={24}
-            color={currentTheme.icon}
-          />
+          {theme === 'dark' ? (
+            <Sun size={24} color={currentTheme.icon} />
+          ) : (
+            <Moon size={24} color={currentTheme.icon} />
+          )}
         </TouchableOpacity>
         <Link href="/favorites" asChild>
           <TouchableOpacity style={styles.button}>
-            <Feather name="heart" size={24} color={currentTheme.icon} />
+            <Heart size={24} color={currentTheme.icon} />
           </TouchableOpacity>
         </Link>
         <TouchableOpacity onPress={getNewQuote} style={styles.button}>
-          <Feather name="refresh-cw" size={24} color={currentTheme.icon} />
+          <RefreshCw size={24} color={currentTheme.icon} />
         </TouchableOpacity>
       </View>
     </View>

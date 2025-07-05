@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect } from 'react'
-import { FiBell, FiHeart, FiSmartphone } from 'react-icons/fi'
+import { Bell, Heart, Smartphone } from 'lucide-react'
 import iconPng from '../assets/icon.png'
 import Layout from '../components/Layout'
 
@@ -122,7 +122,7 @@ function Home() {
                   whileHover={{ scale: 1.2, rotate: 10 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
-                  <FiSmartphone className="text-theme-primary text-4xl mx-auto mb-4" />
+                  <Smartphone className="text-theme-primary text-4xl mx-auto mb-4" />
                 </motion.div>
                 <h4 className="text-theme-white text-xl font-bold mb-2">
                   Daily Quotes
@@ -143,7 +143,7 @@ function Home() {
                   whileHover={{ scale: 1.2, rotate: 10 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
-                  <FiHeart className="text-theme-primary text-4xl mx-auto mb-4" />
+                  <Heart className="text-theme-primary text-4xl mx-auto mb-4" />
                 </motion.div>
                 <h4 className="text-theme-white text-xl font-bold mb-2">
                   Favorites
@@ -164,7 +164,7 @@ function Home() {
                   whileHover={{ scale: 1.2, rotate: 10 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
-                  <FiBell className="text-theme-primary text-4xl mx-auto mb-4" />
+                  <Bell className="text-theme-primary text-4xl mx-auto mb-4" />
                 </motion.div>
                 <h4 className="text-theme-white text-xl font-bold mb-2">
                   Notifications

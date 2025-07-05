@@ -1,4 +1,4 @@
-import { FontAwesome } from '@expo/vector-icons'
+import { Heart, Share as ShareIcon } from 'lucide-react-native'
 import { Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import type { Quote as QuoteType } from '@/lib/quotes/quotes'
 import { themes } from '../constants/Themes'
@@ -47,15 +47,14 @@ export const Quote = ({
       <Text style={styles.authorText}>- {author}</Text>
       <View style={styles.buttonContainer}>
         <TouchableOpacity onPress={toggleFavorite} style={styles.button}>
-          <FontAwesome
-            name={isFav ? 'heart' : 'heart-o'}
+          <Heart
             size={24}
             color={isFav ? 'red' : themes[theme || 'light'].text}
+            fill={isFav ? 'red' : 'none'}
           />
         </TouchableOpacity>
         <TouchableOpacity onPress={onShare} style={styles.button}>
-          <FontAwesome
-            name="share-alt"
+          <ShareIcon
             size={24}
             color={themes[theme || 'light'].text}
           />
