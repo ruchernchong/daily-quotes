@@ -1,22 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FiSmartphone, FiHeart, FiBell } from 'react-icons/fi';
+import Layout from '../components/Layout';
 
-function App() {
+function Home() {
   return (
-    <div className="bg-gray-50 text-gray-800">
-      {/* Hero Section */}
-      <header className="bg-white shadow-md">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900">Daily Quotes</h1>
-          <nav>
-            <a href="#features" className="px-4">Features</a>
-            <a href="#download" className="px-4">Download</a>
-          </nav>
-        </div>
-      </header>
-
-      <main>
+    <Layout>
+      <div>
         <section className="text-center py-20 px-6 bg-gray-100">
           <h2 className="text-5xl font-bold mb-4">Your Daily Dose of Inspiration</h2>
           <p className="text-xl mb-8">Get motivated with hand-picked quotes delivered to you every day.</p>
@@ -69,15 +58,9 @@ function App() {
             </div>
           </div>
         </section>
-      </main>
-
-      <footer className="bg-white py-6">
-        <div className="container mx-auto text-center">
-          <p>&copy; 2025 Daily Quotes. All rights reserved. | <Link to="/privacy" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link></p>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </Layout>
   );
 }
 
-export default App;
+export default Home;
