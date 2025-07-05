@@ -1,8 +1,13 @@
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  useColorScheme,
+} from "react-native";
 import { useFavorites } from "./hooks/useFavorites";
 import { Quote } from "./components/Quote";
 import { themes } from "./constants/Themes";
-import { useColorScheme } from "react-native";
 
 const FavoritesScreen = () => {
   const { favorites } = useFavorites();

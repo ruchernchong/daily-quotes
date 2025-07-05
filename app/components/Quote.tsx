@@ -43,7 +43,7 @@ export const Quote = ({
 
   return (
     <View style={styles.quoteContainer}>
-      <Text style={styles.quoteText}>"{quote}"</Text>
+      <Text style={styles.quoteText}>&quot;{quote}&quot;</Text>
       <Text style={styles.authorText}>- {author}</Text>
       <View style={styles.buttonContainer}>
         <TouchableOpacity onPress={toggleFavorite} style={styles.button}>
