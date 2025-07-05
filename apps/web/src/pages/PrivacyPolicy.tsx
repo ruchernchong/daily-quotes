@@ -9,11 +9,11 @@ const PrivacyPolicy: React.FC = () => {
 
   return (
     <Layout>
-      <div className="bg-gray-100 min-h-screen">
+      <div className="bg-theme-secondary min-h-screen">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto prose prose-lg">
-            <h1>Privacy Policy</h1>
-            <p>Last updated: {new Date().toLocaleDateString()}</p>
+            <h1 className="text-theme-dark">Privacy Policy</h1>
+            <p className="text-theme-medium">Last updated: {new Date().toLocaleDateString()}</p>
 
             <h2>1. Information We Collect</h2>
             <p>

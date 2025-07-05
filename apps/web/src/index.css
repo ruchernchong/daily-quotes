@@ -1,2 +1,124 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+:root {
+  --color-primary: #EE9316;
+  --color-primary-light: #EAA31E;
+  --color-accent: #FCE8BA;
+  --color-accent-light: #F9E7BA;
+  --color-text-dark: #322515;
+  --color-text-medium: #2F2313;
+  --color-text-light: #301F11;
+  --color-background: #FCF4E6;
+  --color-background-secondary: #F8F0E0;
+}
+
+/* Theme Color Classes */
+.bg-theme-primary {
+  background-color: var(--color-background);
+}
+
+.bg-theme-secondary {
+  background-color: var(--color-background-secondary);
+}
+
+.bg-theme-accent {
+  background-color: var(--color-accent);
+}
+
+.bg-theme-dark {
+  background-color: var(--color-text-dark);
+}
+
+.bg-theme-dark-medium {
+  background-color: var(--color-text-medium);
+}
+
+.bg-theme-button {
+  background-color: var(--color-primary);
+}
+
+.text-theme-dark {
+  color: var(--color-text-dark);
+}
+
+.text-theme-medium {
+  color: var(--color-text-medium);
+}
+
+.text-theme-light {
+  color: var(--color-text-light);
+}
+
+.text-theme-primary {
+  color: var(--color-primary);
+}
+
+.text-theme-light-cream {
+  color: var(--color-accent);
+}
+
+.text-theme-white {
+  color: white;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Navigation styling */
+.nav-link {
+  color: var(--color-text-medium);
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.75;
+}
+
+/* Footer link styling */
+.footer-link {
+  color: var(--color-text-light);
+  transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.75;
+}
+
+/* Privacy Policy prose styling */
+.prose h2 {
+  color: var(--color-text-dark);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.5rem;
+}
+
+.prose p, .prose li {
+  color: var(--color-text-medium);
+}
+
+.prose ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.prose ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose ul li::before {
+  content: "•";
+  color: var(--color-primary);
+  font-size: 1.25em;
+  position: absolute;
+  left: 0;
+}
