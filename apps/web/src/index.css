@@ -2,15 +2,15 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --color-primary: #EE9316;
-  --color-primary-light: #EAA31E;
-  --color-accent: #FCE8BA;
-  --color-accent-light: #F9E7BA;
+  --color-primary: #ee9316;
+  --color-primary-light: #eaa31e;
+  --color-accent: #fce8ba;
+  --color-accent-light: #f9e7ba;
   --color-text-dark: #322515;
-  --color-text-medium: #2F2313;
-  --color-text-light: #301F11;
-  --color-background: #FCF4E6;
-  --color-background-secondary: #F8F0E0;
+  --color-text-medium: #2f2313;
+  --color-text-light: #301f11;
+  --color-background: #fcf4e6;
+  --color-background-secondary: #f8f0e0;
 }
 
 /* Theme Color Classes */
@@ -100,7 +100,8 @@
   padding-bottom: 0.5rem;
 }
 
-.prose p, .prose li {
+.prose p,
+.prose li {
   color: var(--color-text-medium);
 }
 
