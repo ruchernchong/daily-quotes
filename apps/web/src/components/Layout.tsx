@@ -24,7 +24,7 @@ function Layout({ children }: LayoutProps) {
 
       <footer className="bg-white py-6">
         <div className="container mx-auto text-center">
-          <p>&copy; 2025 Daily Quotes. All rights reserved. | <Link to="/privacy" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link></p>
+          <p>&copy; 2025 Daily Quotes. All rights reserved. | <Link to="/privacy-policy" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link></p>
         </div>
       </footer>
     </div>

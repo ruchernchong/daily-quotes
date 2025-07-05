@@ -8,7 +8,7 @@ export const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: '/privacy',
+    path: '/privacy-policy',
     element: <PrivacyPolicy />,
   },
 ]);

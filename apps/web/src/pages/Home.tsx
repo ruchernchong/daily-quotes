@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FiSmartphone, FiHeart, FiBell } from 'react-icons/fi';
 import Layout from '../components/Layout';
 
 function Home() {
+  useEffect(() => {
+    document.title = 'Daily Quotes - Your Daily Dose of Inspiration';
+  }, []);
+
   return (
     <Layout>
       <div>

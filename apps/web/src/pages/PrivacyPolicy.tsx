@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 
 const PrivacyPolicy: React.FC = () => {
+  useEffect(() => {
+    document.title = 'Privacy Policy - Daily Quotes';
+  }, []);
+
   return (
     <Layout>
       <div className="bg-gray-100 min-h-screen">
