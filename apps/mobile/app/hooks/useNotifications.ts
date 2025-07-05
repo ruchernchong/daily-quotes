@@ -1,13 +1,12 @@
-import type { Subscription } from "expo-modules-core";
 import * as Notifications from "expo-notifications";
 import { useCallback, useEffect, useRef } from "react";
-import { Platform } from "react-native";
+import { Alert, Platform } from "react-native";
 import { useQuote } from "./useQuote";
 
 export const useNotifications = () => {
   const { getNewQuote, quote } = useQuote("daily");
-  const notificationListener = useRef<Subscription>();
-  const responseListener = useRef<Subscription>();
+  const notificationListener = useRef<Notifications.Subscription | null>(null);
+  const responseListener = useRef<Notifications.Subscription | null>(null);
 
   const registerForPushNotificationsAsync = useCallback(async () => {
     if (Platform.OS === "android") {
@@ -27,7 +26,7 @@ export const useNotifications = () => {
       finalStatus = status;
     }
     if (finalStatus !== "granted") {
-      alert("Failed to get push token for push notification!");
+      Alert.alert("Error", "Failed to get push token for push notification!");
       return;
     }
     const token: string = (await Notifications.getExpoPushTokenAsync()).data;
@@ -43,6 +42,7 @@ export const useNotifications = () => {
           body,
         },
         trigger: {
+          type: Notifications.SchedulableTriggerInputTypes.CALENDAR,
           hour: 9,
           minute: 0,
           repeats: true,

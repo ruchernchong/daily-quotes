@@ -1,5 +1,12 @@
 import { Heart, Share as ShareIcon } from "lucide-react-native";
-import { Share, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Alert,
+  Share,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import type { Quote as QuoteType } from "@/lib/quotes/quotes";
 import { themes } from "../constants/Themes";
 import { useFavorites } from "../hooks/useFavorites";
@@ -37,7 +44,10 @@ export const Quote = ({
         message: `"${currentQuote.quote}" - ${currentQuote.author}`,
       });
     } catch (error) {
-      alert(error.message);
+      Alert.alert(
+        "Error",
+        error instanceof Error ? error.message : "Failed to share quote",
+      );
     }
   };
 

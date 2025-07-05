@@ -1,4 +1,9 @@
-export const quotes = [
+export interface Quote {
+  quote: string;
+  author: string;
+}
+
+export const quotes: Quote[] = [
   {
     quote: "The only way to do great work is to love what you do.",
     author: "Steve Jobs",
