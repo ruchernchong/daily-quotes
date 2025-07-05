@@ -5,8 +5,10 @@ import { useQuote } from "./useQuote";
 
 export const useNotifications = () => {
   const { getNewQuote, quote } = useQuote("daily");
-  const notificationListener = useRef<Notifications.Subscription | null>(null);
-  const responseListener = useRef<Notifications.Subscription | null>(null);
+  const notificationListener = useRef<Notifications.EventSubscription | null>(
+    null,
+  );
+  const responseListener = useRef<Notifications.EventSubscription | null>(null);
 
   const registerForPushNotificationsAsync = useCallback(async () => {
     if (Platform.OS === "android") {
@@ -67,12 +69,11 @@ export const useNotifications = () => {
 
     return () => {
       if (notificationListener.current) {
-        Notifications.removeNotificationSubscription(
-          notificationListener.current,
-        );
+        notificationListener.current.remove();
       }
+
       if (responseListener.current) {
-        Notifications.removeNotificationSubscription(responseListener.current);
+        responseListener.current.remove();
       }
     };
   }, [getNewQuote, registerForPushNotificationsAsync]);
