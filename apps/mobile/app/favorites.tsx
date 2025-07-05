@@ -1,13 +1,13 @@
-import { FlatList, StyleSheet, Text, useColorScheme, View } from 'react-native'
-import { Quote } from './components/Quote'
-import { themes } from './constants/Themes'
-import { useFavorites } from './hooks/useFavorites'
+import { FlatList, StyleSheet, Text, useColorScheme, View } from "react-native";
+import { Quote } from "./components/Quote";
+import { themes } from "./constants/Themes";
+import { useFavorites } from "./hooks/useFavorites";
 
 const FavoritesScreen = () => {
-  const { favorites } = useFavorites()
-  const colorScheme = useColorScheme()
-  const theme = colorScheme || 'light'
-  const styles = getStyles(theme)
+  const { favorites } = useFavorites();
+  const colorScheme = useColorScheme();
+  const theme = colorScheme || "light";
+  const styles = getStyles(theme);
 
   return (
     <View style={styles.container}>
@@ -20,11 +20,11 @@ const FavoritesScreen = () => {
         )}
       />
     </View>
-  )
-}
+  );
+};
 
-const getStyles = (theme: 'light' | 'dark') => {
-  const currentTheme = themes[theme]
+const getStyles = (theme: "light" | "dark") => {
+  const currentTheme = themes[theme];
   return StyleSheet.create({
     container: {
       flex: 1,
@@ -33,12 +33,12 @@ const getStyles = (theme: 'light' | 'dark') => {
     },
     title: {
       fontSize: 24,
-      fontWeight: 'bold',
+      fontWeight: "bold",
       color: currentTheme.text,
       marginBottom: 20,
-      textAlign: 'center',
+      textAlign: "center",
     },
-  })
-}
+  });
+};
 
-export default FavoritesScreen
+export default FavoritesScreen;

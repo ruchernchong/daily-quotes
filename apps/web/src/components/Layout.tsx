@@ -1,28 +1,28 @@
-import { motion } from 'framer-motion'
-import type React from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import iconPng from '../assets/icon.png'
+import { motion } from "framer-motion";
+import type React from "react";
+import { Link, useLocation } from "react-router-dom";
+import iconPng from "../assets/icon.png";
 
 interface LayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 function Layout({ children }: LayoutProps) {
-  const location = useLocation()
-  const isHomePage = location.pathname === '/'
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const handleNavClick = (sectionId: string) => {
     if (isHomePage) {
       // On home page, scroll to section
-      const element = document.getElementById(sectionId)
+      const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
+        element.scrollIntoView({ behavior: "smooth" });
       }
     } else {
       // On other pages, navigate to home page with hash
-      window.location.href = `/#${sectionId}`
+      window.location.href = `/#${sectionId}`;
     }
-  }
+  };
 
   return (
     <div className="bg-theme-primary text-theme-dark min-h-screen flex flex-col">
@@ -35,7 +35,7 @@ function Layout({ children }: LayoutProps) {
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
             <Link
               to="/"
@@ -53,18 +53,18 @@ function Layout({ children }: LayoutProps) {
           </motion.div>
           <nav>
             <motion.button
-              onClick={() => handleNavClick('features')}
+              onClick={() => handleNavClick("features")}
               className="text-theme-light-cream hover:text-theme-white transition-colors px-4 bg-transparent border-none cursor-pointer"
               whileHover={{ y: -2 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               Features
             </motion.button>
             <motion.button
-              onClick={() => handleNavClick('download')}
+              onClick={() => handleNavClick("download")}
               className="text-theme-light-cream hover:text-theme-white transition-colors px-4 bg-transparent border-none cursor-pointer"
               whileHover={{ y: -2 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               Download
             </motion.button>
@@ -82,10 +82,10 @@ function Layout({ children }: LayoutProps) {
       >
         <div className="container mx-auto text-center">
           <p className="text-theme-light-cream">
-            &copy; 2025 Daily Quotes. All rights reserved. |{' '}
+            &copy; 2025 Daily Quotes. All rights reserved. |{" "}
             <motion.span
               whileHover={{ scale: 1.05 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="inline-block"
             >
               <Link
@@ -99,7 +99,7 @@ function Layout({ children }: LayoutProps) {
         </div>
       </motion.footer>
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

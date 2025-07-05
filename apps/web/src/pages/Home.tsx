@@ -1,24 +1,24 @@
-import { motion } from 'framer-motion'
-import { useEffect } from 'react'
-import { Bell, Heart, Smartphone } from 'lucide-react'
-import iconPng from '../assets/icon.png'
-import Layout from '../components/Layout'
+import { motion } from "framer-motion";
+import { Bell, Heart, Smartphone } from "lucide-react";
+import { useEffect } from "react";
+import iconPng from "../assets/icon.png";
+import Layout from "../components/Layout";
 
 function Home() {
   useEffect(() => {
-    document.title = 'Daily Quotes - Your Daily Dose of Inspiration'
+    document.title = "Daily Quotes - Your Daily Dose of Inspiration";
 
     // Handle hash navigation when coming from other pages
     if (window.location.hash) {
-      const hash = window.location.hash.substring(1)
+      const hash = window.location.hash.substring(1);
       setTimeout(() => {
-        const element = document.getElementById(hash)
+        const element = document.getElementById(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
+          element.scrollIntoView({ behavior: "smooth" });
         }
-      }, 100) // Small delay to ensure the component is fully rendered
+      }, 100); // Small delay to ensure the component is fully rendered
     }
-  }, [])
+  }, []);
 
   return (
     <Layout>
@@ -120,7 +120,7 @@ function Home() {
               >
                 <motion.div
                   whileHover={{ scale: 1.2, rotate: 10 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   <Smartphone className="text-theme-primary text-4xl mx-auto mb-4" />
                 </motion.div>
@@ -141,7 +141,7 @@ function Home() {
               >
                 <motion.div
                   whileHover={{ scale: 1.2, rotate: 10 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   <Heart className="text-theme-primary text-4xl mx-auto mb-4" />
                 </motion.div>
@@ -162,7 +162,7 @@ function Home() {
               >
                 <motion.div
                   whileHover={{ scale: 1.2, rotate: 10 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   <Bell className="text-theme-primary text-4xl mx-auto mb-4" />
                 </motion.div>
@@ -268,7 +268,7 @@ function Home() {
         </motion.section>
       </motion.div>
     </Layout>
-  )
+  );
 }
 
-export default Home
+export default Home;

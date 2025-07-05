@@ -1,11 +1,11 @@
-import { Stack } from 'expo-router'
-import { useNotifications } from './hooks/useNotifications'
+import { Stack } from "expo-router";
+import { useNotifications } from "./hooks/useNotifications";
 
 export default function RootLayout() {
-  useNotifications()
+  useNotifications();
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
     </Stack>
-  )
+  );
 }

@@ -1,20 +1,18 @@
-import type React from 'react'
-import { useEffect } from 'react'
-import Layout from '../components/Layout'
+import type React from "react";
+import { useEffect } from "react";
+import Layout from "../components/Layout";
 
 const PrivacyPolicy: React.FC = () => {
   useEffect(() => {
-    document.title = 'Privacy Policy - Daily Quotes'
-  }, [])
+    document.title = "Privacy Policy - Daily Quotes";
+  }, []);
 
   return (
     <Layout>
       <div className="bg-theme-secondary min-h-screen">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl mx-auto prose prose-lg">
-            <h1 className="text-theme-dark">
-              Privacy Policy
-            </h1>
+            <h1 className="text-theme-dark">Privacy Policy</h1>
             <p className="text-theme-medium">
               Last updated: {new Date().toLocaleDateString()}
             </p>
@@ -107,7 +105,7 @@ const PrivacyPolicy: React.FC = () => {
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default PrivacyPolicy
+export default PrivacyPolicy;
