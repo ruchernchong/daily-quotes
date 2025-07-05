@@ -1,5 +1,8 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity, Share } from "react-native";
 import { themes } from "../constants/Themes";
+import { FontAwesome } from "@expo/vector-icons";
+import { Quote as QuoteType } from "@/lib/quotes/quotes";
+import { useFavorites } from "../hooks/useFavorites";
 
 export const Quote = ({
   quote,
@@ -11,11 +14,53 @@ export const Quote = ({
   theme: "light" | "dark" | null | undefined;
 }) => {
   const styles = getStyles(theme);
+  const { isFavorite, addFavorite, removeFavorite } = useFavorites();
+
+  const currentQuote: QuoteType = {
+    quote: quote || "",
+    author: author || "",
+  };
+
+  const isFav = isFavorite(currentQuote);
+
+  const toggleFavorite = () => {
+    if (isFav) {
+      removeFavorite(currentQuote);
+    } else {
+      addFavorite(currentQuote);
+    }
+  };
+
+  const onShare = async () => {
+    try {
+      await Share.share({
+        message: `"${currentQuote.quote}" - ${currentQuote.author}`,
+      });
+    } catch (error) {
+      alert(error.message);
+    }
+  };
 
   return (
     <View style={styles.quoteContainer}>
       <Text style={styles.quoteText}>"{quote}"</Text>
       <Text style={styles.authorText}>- {author}</Text>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity onPress={toggleFavorite} style={styles.button}>
+          <FontAwesome
+            name={isFav ? "heart" : "heart-o"}
+            size={24}
+            color={isFav ? "red" : themes[theme || "light"].text}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={onShare} style={styles.button}>
+          <FontAwesome
+            name="share-alt"
+            size={24}
+            color={themes[theme || "light"].text}
+          />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -48,6 +93,14 @@ const getStyles = (theme: "light" | "dark" | null | undefined) => {
       fontSize: 18,
       color: currentTheme.author,
       textAlign: "right",
+    },
+    buttonContainer: {
+      flexDirection: "row",
+      justifyContent: "space-around",
+      marginTop: 20,
+    },
+    button: {
+      padding: 10,
     },
   });
 };

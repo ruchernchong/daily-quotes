@@ -10,6 +10,7 @@ import { useState } from "react";
 import { themes } from "@/app/constants/Themes";
 import { Feather } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
+import { Link } from "expo-router";
 
 export default function Index() {
   const { quote, getNewQuote } = useQuote("random");
@@ -46,6 +47,11 @@ export default function Index() {
             color={currentTheme.icon}
           />
         </TouchableOpacity>
+        <Link href="/favorites" asChild>
+          <TouchableOpacity style={styles.button}>
+            <Feather name="heart" size={24} color={currentTheme.icon} />
+          </TouchableOpacity>
+        </Link>
         <TouchableOpacity onPress={getNewQuote} style={styles.button}>
           <Feather name="refresh-cw" size={24} color={currentTheme.icon} />
         </TouchableOpacity>
