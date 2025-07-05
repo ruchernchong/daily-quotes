@@ -8,7 +8,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**", "!.claude"]
+    "includes": ["**", "!.claude", "!.releaserc.cjs"]
   },
   "formatter": {
     "enabled": true,
