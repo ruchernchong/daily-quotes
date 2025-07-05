@@ -5,41 +5,42 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      issues: write
-      pull-requests: write
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      
+          node-version: 'lts/*'
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 8
-      
+          version: latest
+
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-      
+        run: pnpm install
+
       - name: Run checks
         run: pnpm check
-      
+
       - name: Build web app
         run: pnpm --filter @dailyquotes/web build
-      
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: pnpm dlx semantic-release
