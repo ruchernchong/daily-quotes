@@ -1,0 +1,124 @@
+# Generated build outputs
+ios/
+android/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Expo
+.expo/
+dist/
+web-build/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# EAS
+.eas/
+*.eas.json.bak
+
+# Metro
+.metro-health-check*
+
+# TypeScript
+*.tsbuildinfo
+
+# Debug
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# React Native
+# Android
+android/app/build/
+android/app/debug.keystore
+android/app/release.keystore
+android/gradle.properties
+android/local.properties
+android/gradlew
+android/gradlew.bat
+android/gradle/wrapper/gradle-wrapper.jar
+
+# iOS
+ios/Pods/
+ios/build/
+ios/DerivedData/
+ios/*.xcuserstate
+ios/*.xcworkspace/xcuserdata/
+
+# Flipper
+android/app/src/debug/java/com/*/ReactNativeFlipper.java
+android/app/src/debug/java/com/*/ReactNativeFlipper.kt
+
+# Bundle artifacts
+*.jsbundle
+*.bundle
+
+# Firebase
+google-services.json
+GoogleService-Info.plist
+
+# Crashlytics
+ios/crashlytics-build-phase
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Testing
+coverage/
+.nyc_output/
+
+# Storybook
+storybook-static/
+
+# Sentry
+.sentryclirc
