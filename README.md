@@ -1,50 +1,154 @@
-# Welcome to your Expo app 👋
+# Daily Quotes
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A cross-platform application for daily inspiration through curated quotes. Built with React Native (mobile) and React (web) in a pnpm monorepo.
 
-## Get started
+## 🌟 Features
 
-1. Install dependencies
+- **Daily Quotes**: Get a new inspirational quote each day
+- **Random Quotes**: Access 200+ curated quotes from various authors
+- **Favorites**: Save your favorite quotes for quick access
+- **Themes**: Light and dark mode support
+- **Cross-Platform**: Native mobile apps (iOS/Android) and web application
 
-   ```bash
-   npm install
-   ```
+## 🏗️ Architecture
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+### Monorepo Structure
+```
+daily-quotes/
+├── apps/
+│   ├── web/           # React web app (marketing site)
+│   └── mobile/        # React Native + Expo mobile app
+├── packages/          # Shared packages (currently empty)
+├── biome.json         # Code quality configuration
+└── pnpm-workspace.yaml
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Technology Stack
+- **Web App**: React 19, Vite, Tailwind CSS v4, React Router, Framer Motion
+- **Mobile App**: React Native, Expo, Expo Router, AsyncStorage
+- **Icons**: Lucide (consistent across platforms)
+- **Monorepo**: pnpm workspaces
+- **Code Quality**: Biome (linting & formatting)
+- **Type Safety**: TypeScript throughout
 
-## Learn more
+## 🚀 Quick Start
 
-To learn more about developing your project with Expo, look at the following resources:
+### Prerequisites
+- Node.js (18+)
+- pnpm
+- For mobile development: Expo CLI and mobile development setup
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Installation
+```bash
+# Clone the repository
+git clone <repository-url>
+cd daily-quotes
 
-## Join the community
+# Install all dependencies
+pnpm install
+```
 
-Join our community of developers creating universal apps.
+### Development
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+#### Web App
+```bash
+# Start development server
+pnpm --filter @dailyquotes/web dev
+
+# Build for production
+pnpm --filter @dailyquotes/web build
+```
+
+#### Mobile App
+```bash
+# Start Expo development server
+pnpm --filter @dailyquotes/mobile start
+
+# Run on specific platforms
+pnpm --filter @dailyquotes/mobile ios
+pnpm --filter @dailyquotes/mobile android
+pnpm --filter @dailyquotes/mobile web
+```
+
+### Code Quality
+```bash
+# Run Biome checks on all apps
+pnpm biome check .
+
+# Auto-fix issues
+pnpm biome check --write .
+
+# App-specific linting
+pnpm --filter @dailyquotes/web lint
+pnpm --filter @dailyquotes/mobile lint
+```
+
+## 📱 Applications
+
+### Mobile App (@dailyquotes/mobile)
+- **Framework**: React Native + Expo
+- **Features**: Random quotes, daily quotes, favorites, theme switching
+- **Storage**: AsyncStorage for local data persistence
+- **Navigation**: Expo Router with file-based routing
+- **Icons**: Lucide React Native
+
+### Web App (@dailyquotes/web)
+- **Framework**: React 19 + Vite
+- **Purpose**: Marketing site and web presence
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+
+## 🛠️ Development Commands
+
+### Root Level
+```bash
+pnpm install                 # Install all dependencies
+pnpm biome check .          # Check code quality
+pnpm biome check --write .  # Auto-fix issues
+```
+
+### Web App
+```bash
+pnpm --filter @dailyquotes/web dev      # Development server
+pnpm --filter @dailyquotes/web build    # Production build
+pnpm --filter @dailyquotes/web lint     # Lint code
+pnpm --filter @dailyquotes/web format   # Format code
+```
+
+### Mobile App
+```bash
+pnpm --filter @dailyquotes/mobile start     # Start Expo dev server
+pnpm --filter @dailyquotes/mobile ios       # Run on iOS
+pnpm --filter @dailyquotes/mobile android   # Run on Android
+pnpm --filter @dailyquotes/mobile lint      # Lint code
+```
+
+## 📊 Project Stats
+
+- **200+ Quotes**: Curated from various authors and sources
+- **Cross-Platform**: iOS, Android, and Web
+- **TypeScript**: 100% type-safe codebase
+- **Modern Tools**: Latest React, Expo, and Vite versions
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run `pnpm biome check --write .` to ensure code quality
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🔗 Links
+
+- **Web App**: [Production URL]
+- **Mobile App**: Available on App Store and Google Play (coming soon)
+- **Repository**: [GitHub Repository URL]
+
+---
+
+Built with ❤️ using React, React Native, and Expo

@@ -45,6 +45,21 @@ tsc -b && vite build
 # Lint
 pnpm lint
 
+# Lint with auto-fix
+pnpm lint:fix
+
+# Format
+pnpm format
+
+# Format with write
+pnpm format:write
+
+# Check (lint + format)
+pnpm check
+
+# Check with auto-fix
+pnpm check:fix
+
 # Preview production build
 pnpm preview
 ```
@@ -68,6 +83,21 @@ pnpm web
 
 # Lint
 pnpm lint
+
+# Lint with auto-fix
+pnpm lint:fix
+
+# Format
+pnpm format
+
+# Format with write
+pnpm format:write
+
+# Check (lint + format)
+pnpm check
+
+# Check with auto-fix
+pnpm check:fix
 ```
 
 ## Architecture
@@ -78,7 +108,9 @@ pnpm lint
 - **Routing**: React Router DOM with browser router
 - **Structure**: Marketing site with homepage and privacy policy
 - **Components**: Functional components with hooks
-- **Icons**: React Icons (Feather icons)
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Linting**: Biome (replaces ESLint)
 
 ### Mobile App
 - **Framework**: React Native with Expo (file-based routing)
@@ -88,7 +120,8 @@ pnpm lint
 - **Data**: Local quotes array in `lib/quotes/quotes.ts`
 - **Features**: Random quotes, daily quotes, favorites, theme toggle
 - **Fonts**: Custom PlayfairDisplay-Regular font
-- **Icons**: @expo/vector-icons (Feather icons)
+- **Icons**: Lucide React Native
+- **Linting**: Biome (replaces ESLint)
 
 ### Shared Data
 - Quotes are stored in `apps/mobile/lib/quotes/quotes.ts`
@@ -98,10 +131,11 @@ pnpm lint
 ## Key Files
 
 ### Web App
-- `src/App.tsx` - Main marketing page component
-- `src/Layout.tsx` - Reusable layout component
+- `src/pages/Home.tsx` - Main marketing page component
+- `src/components/Layout.tsx` - Reusable layout component
 - `src/main.tsx` - App entry point with routing
-- `src/PrivacyPolicy.tsx` - Privacy policy page
+- `src/pages/PrivacyPolicy.tsx` - Privacy policy page
+- `src/routes/index.tsx` - Route definitions
 - `vite.config.ts` - Vite configuration with React and Tailwind plugins
 
 ### Mobile App
@@ -117,7 +151,7 @@ pnpm lint
 ### Code Style
 - TypeScript is used throughout both apps
 - Functional components with hooks pattern
-- ESLint configured for code quality
+- **Biome** configured for linting and formatting (replaced ESLint)
 - No tests currently implemented
 
 ### Mobile App Features
@@ -138,6 +172,26 @@ pnpm lint
 - **Web**: Vite build process, outputs to `dist/`
 - **Mobile**: EAS (Expo Application Services) for builds
 - **Type Checking**: TypeScript with strict mode
+
+## Code Quality & Tooling
+
+### Biome Configuration
+The project uses **Biome** for linting and formatting (configured in `biome.json`):
+- **Formatter**: 2-space indentation, 80-character line width, single quotes for JS/TS
+- **Linter**: Recommended rules enabled with custom overrides
+- **Overrides**: Web app enforces import types, mobile app allows array index keys
+- **Commands**: `lint`, `format`, `check` (with auto-fix variants)
+
+### Common Biome Commands
+```bash
+# Root level (affects all apps)
+pnpm biome check .
+pnpm biome check --write .
+
+# App-specific
+pnpm --filter @dailyquotes/web lint
+pnpm --filter @dailyquotes/mobile format:write
+```
 
 ## Monorepo Management
 
