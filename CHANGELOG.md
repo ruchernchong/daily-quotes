@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/ruchernchong/daily-quotes/compare/v1.0.0...v1.0.1) (2025-07-05)
+
+
+### Bug Fixes
+
+* **mobile:** fix types ([580b52d](https://github.com/ruchernchong/daily-quotes/commit/580b52db796307d73abc501e2fb763f1810f7b41))
+* **mobile:** replace deprecated notification APIs ([ca689c2](https://github.com/ruchernchong/daily-quotes/commit/ca689c236d71f021c5ea96fdc0d5b23eb4b3fa9c))
+
 # 1.0.0 (2025-07-05)
 
 
