@@ -46,6 +46,7 @@ function Home() {
           >
             Get motivated with hand-picked quotes delivered to you every day.
           </motion.p>
+          {/* Download buttons temporarily removed
           <motion.div 
             className="flex justify-center gap-4"
             initial={{ y: 20, opacity: 0 }}
@@ -71,6 +72,7 @@ function Home() {
               Download for Android
             </motion.a>
           </motion.div>
+          */}
         </motion.section>
 
         {/* Features Section */}
@@ -207,6 +209,7 @@ function Home() {
             >
               Join thousands of users who start their day with inspiration.
             </motion.p>
+            {/* Download buttons temporarily removed
             <motion.div 
               className="flex justify-center gap-4"
               initial={{ y: 20, opacity: 0 }}
@@ -233,6 +236,7 @@ function Home() {
                 Download for Android
               </motion.a>
             </motion.div>
+            */}
           </div>
         </motion.section>
       </motion.div>
