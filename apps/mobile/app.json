@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "daily-quotes",
+    "name": "Daily Quotes",
     "slug": "daily-quotes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "dailyquotes",
+    "scheme": "daily-quotes",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -14,11 +14,9 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/adaptive-icon.png"
       },
-      "package": "com.ruchernchong.dailyquotes",
-      "edgeToEdgeEnabled": true
+      "package": "com.ruchernchong.dailyquotes"
     },
     "web": {
       "bundler": "metro",
