@@ -1,14 +1,16 @@
-import { Text, View, StyleSheet, useColorScheme } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
+import { themes } from "../constants/Themes";
 
 export const Quote = ({
   quote,
   author,
+  theme,
 }: {
   quote?: string;
   author?: string;
+  theme: "light" | "dark" | null | undefined;
 }) => {
-  const colorScheme = useColorScheme();
-  const styles = getStyles(colorScheme);
+  const styles = getStyles(theme);
 
   return (
     <View style={styles.quoteContainer}>
@@ -18,27 +20,26 @@ export const Quote = ({
   );
 };
 
-const getStyles = (theme: "light" | "dark" | null | undefined) =>
-  StyleSheet.create({
+const getStyles = (theme: "light" | "dark" | null | undefined) => {
+  const currentTheme = themes[theme || "light"];
+  return StyleSheet.create({
     quoteContainer: {
       padding: 20,
       borderRadius: 10,
-      backgroundColor:
-        theme === "dark"
-          ? "rgba(255, 255, 255, 0.1)"
-          : "rgba(0, 0, 0, 0.1)",
+      backgroundColor: currentTheme.quoteContainer,
       margin: 20,
     },
     quoteText: {
       fontSize: 24,
       fontStyle: "italic",
-      color: theme === "dark" ? "white" : "black",
+      color: currentTheme.text,
       textAlign: "center",
     },
     authorText: {
       fontSize: 18,
-      color: theme === "dark" ? "white" : "black",
+      color: currentTheme.text,
       textAlign: "right",
       marginTop: 10,
     },
   });
+};

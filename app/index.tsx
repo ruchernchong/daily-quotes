@@ -2,13 +2,14 @@ import {
   StyleSheet,
   TouchableOpacity,
   useColorScheme,
+  View,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { Quote } from "@/app/components/Quote";
 import { QuoteTypeToggle } from "@/app/components/QuoteTypeToggle";
 import { ThemeToggle } from "@/app/components/ThemeToggle";
 import { QuoteType, useQuote } from "@/app/hooks/useQuote";
 import { useState } from "react";
+import { themes } from "@/app/constants/Themes";
 
 export default function Index() {
   const [quoteType, setQuoteType] = useState<QuoteType>("daily");
@@ -24,25 +25,29 @@ export default function Index() {
     setQuoteType(quoteType === "daily" ? "random" : "daily");
   };
 
-  const backgroundColors =
-    theme === "dark"
-      ? ["#1a1a1a", "#3a3a3a", "#1a1a1a"]
-      : ["#f0f0f0", "#d0d0d0", "#f0f0f0"];
+  const currentTheme = themes[theme || "light"];
 
   return (
-    <LinearGradient colors={backgroundColors} style={styles.container}>
+    <View
+      style={[styles.container, { backgroundColor: currentTheme.background }]}
+    >
       <TouchableOpacity onPress={getNewQuote} style={styles.touchable}>
         <QuoteTypeToggle
           quoteType={quoteType}
           toggleQuoteType={toggleQuoteType}
+          theme={theme}
         />
         <ThemeToggle
           theme={theme as "light" | "dark"}
           toggleTheme={toggleTheme}
         />
-        <Quote quote={quote?.quote} author={quote?.author} />
+        <Quote
+          quote={quote?.quote}
+          author={quote?.author}
+          theme={theme}
+        />
       </TouchableOpacity>
-    </LinearGradient>
+    </View>
   );
 }
 
@@ -59,3 +64,4 @@ const styles = StyleSheet.create({
     width: "100%",
   },
 });
+

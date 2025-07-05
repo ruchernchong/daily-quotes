@@ -6,16 +6,18 @@ import {
   useColorScheme,
 } from "react-native";
 import { QuoteType } from "../hooks/useQuote";
+import { themes } from "../constants/Themes";
 
 export const QuoteTypeToggle = ({
   quoteType,
   toggleQuoteType,
+  theme,
 }: {
   quoteType: QuoteType;
   toggleQuoteType: () => void;
+  theme: "light" | "dark" | null | undefined;
 }) => {
-  const colorScheme = useColorScheme();
-  const styles = getStyles(colorScheme);
+  const styles = getStyles(theme);
   return (
     <View style={styles.quoteTypeToggleContainer}>
       <Text style={styles.quoteTypeText}>
@@ -31,8 +33,9 @@ export const QuoteTypeToggle = ({
   );
 };
 
-const getStyles = (theme: "light" | "dark" | null | undefined) =>
-  StyleSheet.create({
+const getStyles = (theme: "light" | "dark" | null | undefined) => {
+  const currentTheme = themes[theme || "light"];
+  return StyleSheet.create({
     quoteTypeToggleContainer: {
       position: "absolute",
       top: 50,
@@ -41,7 +44,8 @@ const getStyles = (theme: "light" | "dark" | null | undefined) =>
       alignItems: "center",
     },
     quoteTypeText: {
-      color: theme === "dark" ? "white" : "black",
+      color: currentTheme.text,
       marginRight: 10,
     },
   });
+};
