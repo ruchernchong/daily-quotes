@@ -1,6 +1,5 @@
 import type React from 'react'
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Layout from '../components/Layout'
 
 const PrivacyPolicy: React.FC = () => {
@@ -10,35 +9,15 @@ const PrivacyPolicy: React.FC = () => {
 
   return (
     <Layout>
-      <motion.div 
-        className="bg-theme-secondary min-h-screen"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
+      <div className="bg-theme-secondary min-h-screen">
         <div className="container mx-auto px-4 py-8">
-          <motion.div 
-            className="max-w-4xl mx-auto prose prose-lg"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <motion.h1 
-              className="text-theme-dark"
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
+          <div className="max-w-4xl mx-auto prose prose-lg">
+            <h1 className="text-theme-dark">
               Privacy Policy
-            </motion.h1>
-            <motion.p 
-              className="text-theme-medium"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
+            </h1>
+            <p className="text-theme-medium">
               Last updated: {new Date().toLocaleDateString()}
-            </motion.p>
+            </p>
 
             <h2>1. Information We Collect</h2>
             <p>
@@ -124,9 +103,9 @@ const PrivacyPolicy: React.FC = () => {
               practices, please contact us at:
             </p>
             <p>Email: hello@ruchern.dev</p>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </Layout>
   )
 }
