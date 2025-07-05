@@ -44,6 +44,7 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERCEL_SKIP_DEPLOYMENT: 1
         run: |
           export HUSKY=0
           pnpm dlx semantic-release
