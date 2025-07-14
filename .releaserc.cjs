@@ -11,9 +11,15 @@ module.exports = {
     ],
     "@semantic-release/npm",
     [
+      "semantic-release-expo",
+      {
+        manifests: ["apps/mobile/app.json"],
+      },
+    ],
+    [
       "@semantic-release/git",
       {
-        assets: ["CHANGELOG.md", "package.json"],
+        assets: ["CHANGELOG.md", "package.json", "apps/mobile/app.json"],
         message:
           "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
