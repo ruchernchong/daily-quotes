@@ -2,7 +2,7 @@
   "expo": {
     "name": "Daily Quotes",
     "slug": "daily-quotes",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "daily-quotes",
@@ -10,13 +10,15 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.ruchernchong.dailyquotes"
+      "bundleIdentifier": "com.ruchernchong.dailyquotes",
+      "buildNumber": "1.2.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png"
       },
-      "package": "com.ruchernchong.dailyquotes"
+      "package": "com.ruchernchong.dailyquotes",
+      "versionCode": 0
     },
     "web": {
       "bundler": "metro",

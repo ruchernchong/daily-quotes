@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/ruchernchong/daily-quotes/compare/v1.1.0...v1.2.0) (2025-07-14)
+
+
+### Features
+
+* integrate semantic-release with expo app versioning ([a206b32](https://github.com/ruchernchong/daily-quotes/commit/a206b32781bed21430d232916ebf897b8c388733))
+
 # [1.1.0](https://github.com/ruchernchong/daily-quotes/compare/v1.0.1...v1.1.0) (2025-07-05)
 
 
